@@ -16,6 +16,10 @@ app.get("/2ndRoute",( req, res) => {
     console.log("route 2 is running")
     res.send("yeeeeah")
 })
+app.get("/number3",(req, res) =>{
+    console.log("number 3 is on me")
+    res.send("It's Me")
+})
 
 
 
