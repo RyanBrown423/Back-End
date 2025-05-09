@@ -16,10 +16,21 @@ function App() {
       }).catch(err => console.log(err))
 
   }
+  const handleSecondRoute = ()=> {
+    console.log("handleSecondRoute")
+    axios({
+      method: "GET",
+      url: "http://localhost:3000/2ndRoute"
+    })
+    .then(res => {
+      console.log("test res 2nd",res)
+    }).catch(err => console.log(err)) 
+  }
 
   return (
     <>
       <button onClick={(e) => handleTestRoute()}>testRo</button>
+   <button onClick = {(e) => handleSecondRoute()}>2ndRoute</button>
     </>
   )
 }
